@@ -5,7 +5,7 @@ import './CSVUploader.css'
 
 export default function CSVUploader() {
 
-    const TRIGGER_URL = "http://localhost:5678/webhook/3016ac02-e5d2-4f1d-a01f-32652ef1fa80"
+    const TRIGGER_URL = import.meta.env.VITE_WEBHOOK_URL
 
     const [status, setStatus] = useState('No file uploaded')
     const [lastFiles, setLastFiles] = useState([])  // store multiple generated CSV files
